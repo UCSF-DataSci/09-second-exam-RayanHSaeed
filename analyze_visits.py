@@ -44,3 +44,6 @@ age_bins = pd.cut(data['age'], bins=[20, 30, 40, 50, 60, 70, 80])
 age_speed = data.groupby(age_bins)['walking_speed'].mean()
 print("\nWalking Speed by Age Group:")
 print(age_speed)
+
+#saving new csv with insurance
+data.to_csv("ms_data_insurance.csv", index=False)
